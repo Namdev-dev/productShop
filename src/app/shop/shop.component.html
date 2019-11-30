@@ -1,0 +1,31 @@
+<ng-container *ngIf="productDetail">
+   
+<table style="width: 100%">   
+<tr>  
+    <th>    
+<p>{{productDetail.title}}</p> 
+<p>{{productDetail.name}}</p>
+<img [src]="productDetail.imageUrl" alt="">
+<p>{{productDetail.price}}</p>
+<p>{{productDetail.productID}}</p>
+<p>{{productDetail.category}}</p>
+<p>{{productDetail.createdAt}}</p>
+<p>{{productDetail.latestReviewDate}}</p>
+    </th>
+</tr> 
+<tr> 
+    
+<div *ngFor="let item of productDetail.topScores">
+
+<td>
+<p>product rating : {{item.score}}</p>
+</td>
+<td>
+<p>product top : {{item.topic}}</p>
+</td>
+</div>
+
+</tr>
+</table>
+
+</ng-container>
